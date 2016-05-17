@@ -26,7 +26,6 @@ dnf update --assumeyes &&
 		 --prefix=/opt/gcc \
 		 --disable-multilib &&
     make -j8 &&
-    mkdir /opt/needlesslaser/gcc &&
     make DESTDIR=/opt/needlesslaser/gcc install &&
     export PATH=/opt/needlesslaser/gcc/gcc-bin/gcc${VERSION}:${PATH} &&
     mkdir /opt/needlesslaser/c9sdk &&
