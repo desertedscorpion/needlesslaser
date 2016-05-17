@@ -7,6 +7,7 @@ RUN mkdir /opt/needlesslaser/sbin && chmod 0500 /opt/needlesslaser/sbin && mkdir
 COPY install.sh /opt/needlesslaser/sbin/install
 COPY run.sh /opt/needlesslaser/sbin/run
 COPY user.sh /opt/needlesslaser/bin/user
-RUN chmod 0500 /opt/needlesslaser/sbin/install /opt/needlesslaser/sbin/run && chmod 0555 /opt/needlesslaser/bin/user && /opt/needlesslaser/sbin/install
+COPY post-commit.sh /opt/needlesslaser/bin/post-commit
+RUN chmod 0500 /opt/needlesslaser/sbin/* && chmod 0555 /opt/needlesslaser/bin/* /opt/needlesslaser/sbin/install
 EXPOSE 8181
 CMD ["/opt/needlesslaser/sbin/run"]
