@@ -13,6 +13,7 @@ GCC_VERSION=4.8.2 &&
     cd $(mktemp -d) &&
     curl --output gcc-${GCC_VERSION}.tar.bz2 http://ftp.gnu.org/gnu/gcc/gcc-${GCC_VERSION}/gcc-${GCC_VERSION}.tar.bz2 &&
     bunzip2 gcc-${GCC_VERSION}.tar.bz2 &&
+    ls -lht &&
     tar --extract --file ${GCC_VERSION}.tar &&
     mkdir build &&
     cd build &&
