@@ -17,7 +17,6 @@ GCC_VERSION=4.8.2 &&
     tar --extract --file gcc-${GCC_VERSION}.tar &&
     mkdir build &&
     cd build &&
-    cd build &&
     ../configure --disable-checking --enable-languages=c,c++ \
 		 --enable-multiarch --enable-shared --enable-threads=posix \
 		 --program-suffix=4.8 --with-gmp=/usr/local/lib --with-mpc=/usr/lib \
