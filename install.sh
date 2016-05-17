@@ -4,7 +4,7 @@ dnf update --assumeyes &&
     dnf install --assumeyes git node make gcc python sudo pass &&
     dnf update --assumeyes &&
     dnf clean all &&
-    chmod 0500 /opt/needlesslaser/private &&
+    chmod 0555 /opt/needlesslaser/private &&
     chmod 0555 /opt/needlesslaser/input &&
     chmod 0777 /opt/needlesslaser/output &&
     mkdir /opt/needlesslaser/c9sdk &&
