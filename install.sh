@@ -1,7 +1,7 @@
 #!/bin/bash
 
 dnf update --assumeyes &&
-    dnf install --assumeyes git node sudo &&
+    dnf install --assumeyes git node make gcc python-2.7 sudo &&
     dnf update --assumeyes &&
     dnf clean all &&
     chmod 0500 /opt/needlesslaser/private &&
