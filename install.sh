@@ -2,8 +2,8 @@
 
 GCC_VERSION=4.8.2 &&
     dnf update --assumeyes &&
-    dnf install --assumeyes git node make python tar which bzip2 ncurses sudo pass &&
-    dnf update --assumeyes &&
+    dnf install --assumeyes git node make python tar which bzip2 ncurses gmp-devel mpfr-devel libmpc-devel glibc-devel flex bison glibc-static zlib-devel sudo pass &&
+dnf update --assumeyes &&
     dnf clean all &&
     chmod 0555 /opt/needlesslaser/private &&
     chmod 0555 /opt/needlesslaser/input &&
