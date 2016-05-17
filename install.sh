@@ -12,4 +12,5 @@ dnf update --assumeyes &&
     git -C /opt/needlesslaser/c9sdk init &&
     git -C /opt/needlesslaser/c9sdk remote add origin git://github.com/c9/core.git &&
     /opt/needlesslaser/c9sdk/scripts/install-sdk.sh &&
+    
     true
