@@ -1,5 +1,5 @@
 FROM taf7lwappqystqp4u7wjsqkdc7dquw/easternmoose
-ENV LUSER="emory" GIT_NAME="Emory Merryman GIT_EMAIL="emory.merryman@gmail.com"
+ENV LUSER="emory" KEY_ID="" GIT_NAME="Emory Merryman GIT_EMAIL="emory.merryman@gmail.com" PASS_REPO="" WORK_REPO=""
 VOLUME /opt/needlesslaser/private
 VOLUME /opt/needlesslaser/input
 VOLUME /opt/needlesslaser/output
