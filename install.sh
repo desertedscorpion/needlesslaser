@@ -35,4 +35,5 @@ GCC_VERSION=4.8.2 &&
     git -C /opt/needlesslaser/c9sdk remote add origin git://github.com/c9/core.git &&
     git -C /opt/needlesslaser/c9sdk pull origin master &&
     /opt/needlesslaser/c9sdk/scripts/install-sdk.sh &&
+    systemctl enable needlessbeta.service &&
     true
