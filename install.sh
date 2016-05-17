@@ -34,5 +34,5 @@ dnf update --assumeyes &&
     git -C /opt/needlesslaser/c9sdk remote add origin git://github.com/c9/core.git &&
     git -C /opt/needlesslaser/c9sdk pull origin master &&
     /opt/needlesslaser/c9sdk/scripts/install-sdk.sh &&
-    systemctl enable needlessbeta.service &&
+    systemctl enable needlesslaser.service &&
     true
