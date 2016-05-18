@@ -20,6 +20,7 @@ KEY_ID="${1}" &&
     ln --symbolic --force /opt/needlesslaser/bin/post-commit ${HOME}/.password-store/.git/hooks &&
     mkdir ${HOME}/workspace &&
     git -C ${HOME}/workspace init &&
+    git -C ${HOME}/workspace remote add origin ${WORK_REPO} &&
     (git -C ${HOME}/workspace pull origin master || true) &&
     ln --symbolic --force /opt/needlesslaser/bin/post-commit ${HOME}/workspace/.git/hooks &&
     node /opt/needlesslaser/c9sdk/server.js -w ${HOME}/workspace &&
