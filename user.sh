@@ -16,11 +16,11 @@ KEY_ID="${1}" &&
     git config --global user.name "${GIT_NAME}" &&
     pass git init &&
     pass git remote add origin ${PASS_REPO} &&
-    pass git pull origin master &&
+    (pass git pull origin master || true) &&
     ln --symbolic --force /opt/needlesslaser/bin/post-commit ${HOME}/.password-store/.git/hooks &&
     mkdir ${HOME}/workspace &&
     git -C ${HOME}/workspace init &&
-    git -C ${HOME}/workspace pull origin master &&
+    (git -C ${HOME}/workspace pull origin master || true) &&
     ln --symbolic --force /opt/needlesslaser/bin/post-commit ${HOME}/workspace/.git/hooks &&
     node /opt/needlesslaser/c9sdk/server.js -w ${HOME}/workspace &&
     sleep 1m &&
