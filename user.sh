@@ -16,7 +16,7 @@ KEY_ID="${1}" &&
     git config --global user.name "${GIT_NAME}" &&
     pass git init &&
     pass git remote add origin ${PASS_REPO} &&
-    pass pull origin master &&
+    pass git pull origin master &&
     ln --symbolic --force /opt/needlesslaser/bin/post-commit ${HOME}/.password-store/.git/hooks &&
     mkdir ${HOME}/workspace &&
     git -C ${HOME}/workspace init &&
