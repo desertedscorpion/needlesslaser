@@ -1,5 +1,5 @@
 #!/bin/bash
 
 mkdir ${HOME}/workspace &&
-node /opt/needlesslaser/c9sdk/server.js --listen 0.0.0.0 -w ${HOME}/workspace -p 8080 --auth ${USER}:${USER} &&
+curl -L https://raw.githubusercontent.com/c9/install/master/install.sh | bash &&
 true
