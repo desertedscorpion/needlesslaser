@@ -1,8 +1,0 @@
-[Unit]
-Description=needlesslaser cloud9 initialization
-
-[Service]
-ExecStart=/opt/needlesslaser/sbin/run
-
-[Install]
-WantedBy=multi-user.target
