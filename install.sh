@@ -12,4 +12,5 @@ dnf clean all &&
     git -C /opt/needlesslaser/c9sdk remote add origin git://github.com/c9/core.git &&
     git -C /opt/needlesslaser/c9sdk pull origin master &&
     /opt/needlesslaser/c9sdk/scripts/install-sdk.sh &&
+    curl -L https://raw.githubusercontent.com/c9/install/master/install.sh | bash &&
     true
