@@ -1,7 +1,9 @@
 FROM fedora:23
 ENV LUSER="emory"
-COPY install-c9sdk.sh /opt/needlesslaser/sbin/install-c9sdk
-RUN chmod 0500 /opt/needlesslaser/sbin/*
-RUN time /opt/needlesslaser/sbin/install-c9sdk
+COPY install.sh /opt/needlesslaser/install.sh
+COPY init.sh /opt/needlesslaser/sbin/init
+COPY setup.sh /opt/needlesslaser/bin/setup
+RUN /usr/bin/bash /opt/needlesslaser/install.sh
+ENV LUSER="emory"
 EXPOSE 8080
-CMD ["/usr/bin/bash"]
+CMD ["/opt/needlesslaser/sbin/init"]
