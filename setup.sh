@@ -9,7 +9,7 @@ chmod 0700 ${HOME}/.ssh &&
 cp /opt/needlesslaser/lib/config ${HOME}/.ssh/config &&
 chmod 0600 ${HOME}/.ssh/config &&
 mkdir ${HOME}/bin &&
-chmod 0600 ${HOME}/bin &&
-# ln --symbolic --force /opt/needlesslaser/bin/rebase ${HOME}/bin &&
-# ln --symbolic --force /opt/needlesslaser/bin/new-branch ${HOME}/bin &&
+chmod 0700 ${HOME}/bin &&
+ln --symbolic --force /opt/needlesslaser/bin/rebase ${HOME}/bin &&
+ln --symbolic --force /opt/needlesslaser/bin/new-branch ${HOME}/bin &&
 true
