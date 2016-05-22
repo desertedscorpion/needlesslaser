@@ -15,8 +15,8 @@ git config --global user.name "${GIT_NAME}" &&
 git -C ${HOME}/workspace remote add origin ${GIT_URL} &&
 git -C ${HOME}/workspace pull origin "${GIT_BRANCH_PARENT}" &&
 git -C ${HOME}/workspace checkout -b scratch-$(cat /dev/urandom | tr -dc 'A-Z0-9' | fold -w 4 | head -n 1)-$(echo "${GIT_BRANCH_CHILD}" | sed -e 's/ /_/g') &&
-(gpg --allow-secret-key- --import /opt/needlesslaser/private/secret.key || true ) &&
-(gpg2 --allow-secret-key- --import /opt/needlesslaser/private/secret.key || true ) &&
+(gpg --allow-secret-key --import /opt/needlesslaser/private/secret.key || true ) &&
+(gpg2 --allow-secret-key --import /opt/needlesslaser/private/secret.key || true ) &&
 gpg --import-ownertrust /opt/needlesslaser/private/owner.trust &&
 pass init ${GPG_KEY_ID} &&
 pass git init &&
