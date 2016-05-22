@@ -21,4 +21,5 @@ pass git init &&
 pass git remote add origin ${PASS_GIT_URL} &&
 pass git pull origin master &&
 ln --symbolic --force /opt/needlesslaser/bin/post-commit ${HOME}/.password-store/.git/hooks &&
+git -C ${HOME}/nginx pull origin master &&
 true
