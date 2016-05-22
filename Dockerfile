@@ -7,6 +7,7 @@ COPY run.sh /opt/needlesslaser/bin/run
 COPY config /opt/needlesslaser/lib/config
 COPY post-commit.sh /opt/needlesslaser/bin/post-commit
 COPY rebase.sh /opt/needlesslaser/bin/rebase
+COPY new-branch.sh /opt/needlesslaser/bin/new-branch
 RUN /usr/bin/bash /opt/needlesslaser/install.sh
 VOLUME /opt/needlesslaser/private
 ENV LUSER="emory" GIT_EMAIL="emory.merryman@deciphernow.com" GIT_NAME="Emory Merryman" GIT_URL="git@github.com:desertedscorpion/needlesslaser.git" GIT_BRANCH_PARENT="master" GIT_BRANCH_CHILD=""
