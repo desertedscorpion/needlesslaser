@@ -1,4 +1,9 @@
 Host github.com
 User git
 IdentityFile ~/.ssh/id_rsa
-StrictHostKeyChecking false
+StrictHostKeyChecking no
+
+Host gitlab.363-283.io
+User git
+IdentityFile ~/.ssh/id_rsa
+StrictHostKeyChecking no
