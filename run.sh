@@ -9,6 +9,7 @@ LDAP_USERNAME="${6}" &&
 LDAD_PASSWORD="${7}" &&
 LDAP_EMAIL="${8}" &&
 GPG_KEY_ID="${9}" &&
+PASS_GIT_URL="${10}" &&
 cp /opt/needlesslaser/private/id_rsa ${HOME}/.ssh/id_rsa &&
 chmod 0600 ${HOME}/.ssh/id_rsa &&
 git config --global user.email "${GIT_EMAIL}" &&
@@ -21,7 +22,6 @@ git -C ${HOME}/workspace checkout -b scratch-$(cat /dev/urandom | tr -dc 'A-Z0-9
 gpg --import-ownertrust /opt/needlesslaser/private/owner.trust &&
 pass init ${GPG_KEY_ID} &&
 pass git init &&
-
 pass git remote add origin ${PASS_GIT_URL} &&
 pass git pull origin master &&
 ln --symbolic --force /opt/needlesslaser/bin/post-commit ${HOME}/.password-store/.git/hooks &&
