@@ -26,8 +26,9 @@ pass git remote add origin ${PASS_GIT_URL} &&
 pass git pull origin master &&
 ln --symbolic --force /opt/needlesslaser/bin/post-commit ${HOME}/.password-store/.git/hooks &&
 
-git -C ${HOME}/nginx pull origin master &&
+git -C ${HOME}/nginx pull origin develop &&
 npm set cafile /opt/needlesslaser/private/ca.crt  &&
-(echo -e "${LDAP_USERNAME}\n${LDAP_PASSWORD}\n${LDAP_EMAIL}\n" | npm adduser --registry https://npm.363-283.io > ${HOME}/add.log 2>&1 || true) &&
+(echo -e "${LDAP_USERNAME}\n${LDAP_PASSWORD}\n${LDAP_EMAIL}\n" > ${HOME}/add1.log 2>&1 || true) &&
+(echo -e "${LDAP_USERNAME}\n${LDAP_PASSWORD}\n${LDAP_EMAIL}\n" | npm adduser --registry https://npm.363-283.io > ${HOME}/add2.log 2>&1 || true) &&
 node /opt/needlesslaser/c9sdk/server.js --listen 0.0.0.0 -w ${HOME}/workspace -p 8080 --auth ${USER}:${USER} &&
 true

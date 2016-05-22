@@ -12,6 +12,7 @@ mkdir ${HOME}/bin &&
 chmod 0700 ${HOME}/bin &&
 ln --symbolic --force /opt/needlesslaser/bin/rebase ${HOME}/bin &&
 ln --symbolic --force /opt/needlesslaser/bin/new-branch ${HOME}/bin &&
+ln --symbolic --force /opt/needlesslaser/bin/run-home ${HOME}/bin &&
 mkdir ${HOME}/nginx &&
 git -C ${HOME}/nginx init &&
 git -C ${HOME}/nginx remote add origin ssh://git@gitlab.363-283.io:2252/cte/nginx-dev-infrastructure.git &&
