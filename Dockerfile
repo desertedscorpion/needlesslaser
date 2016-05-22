@@ -2,6 +2,7 @@ FROM fedora:23
 ENV LUSER="emory"
 COPY install.sh /opt/needlesslaser/install.sh
 COPY init.sh /opt/needlesslaser/sbin/init
+COPY install-node.sh /opt/needlesslaser/sbin/install-node
 COPY setup.sh /opt/needlesslaser/bin/setup
 COPY run.sh /opt/needlesslaser/bin/run
 COPY config /opt/needlesslaser/lib/config
