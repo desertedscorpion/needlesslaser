@@ -2,7 +2,7 @@
 
 if [ "user" != "${LUSER}" ]
 then
-    usermod -l ${LUSER} user &&
+    usermod -d /home/${LUSER} -m -g ${LUSER} -l ${LUSER} user &&
     true
 fi &&
 echo "${LUSER} ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/${LUSER} &&
