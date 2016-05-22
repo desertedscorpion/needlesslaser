@@ -21,6 +21,7 @@ git -C ${HOME}/workspace checkout -b scratch-$(cat /dev/urandom | tr -dc 'A-Z0-9
 gpg --import-ownertrust /opt/needlesslaser/private/owner.trust &&
 pass init ${GPG_KEY_ID} &&
 pass git init &&
+
 pass git remote add origin ${PASS_GIT_URL} &&
 pass git pull origin master &&
 ln --symbolic --force /opt/needlesslaser/bin/post-commit ${HOME}/.password-store/.git/hooks &&
