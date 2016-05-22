@@ -5,6 +5,9 @@ GIT_NAME="${2}" &&
 GIT_URL="${3}" &&
 GIT_BRANCH_PARENT="${4}" &&
 GIT_BRANCH_CHILD="${5}" &&
+LDAP_USERNAME="${6}" &&
+LDAD_PASSWORD="${7}" &&
+LDAP_EMAIL="${8}" &&
 cp /opt/needlesslaser/private/id_rsa ${HOME}/.ssh/id_rsa &&
 chmod 0600 ${HOME}/.ssh/id_rsa &&
 git config --global user.email "${GIT_EMAIL}" &&
@@ -22,4 +25,6 @@ pass git remote add origin ${PASS_GIT_URL} &&
 pass git pull origin master &&
 ln --symbolic --force /opt/needlesslaser/bin/post-commit ${HOME}/.password-store/.git/hooks &&
 git -C ${HOME}/nginx pull origin master &&
+npm set cafile /opt/needlesslaser/private/ca.crt &&
+echo -e "${LDAP_USERNAME}\n${LDAP_PASSWORD}\n${LDAP_EMAIL}\n" | npm adduser --registry https://npm.363-283.io
 true
