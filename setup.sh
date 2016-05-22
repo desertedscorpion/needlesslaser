@@ -14,5 +14,5 @@ ln --symbolic --force /opt/needlesslaser/bin/rebase ${HOME}/bin &&
 ln --symbolic --force /opt/needlesslaser/bin/new-branch ${HOME}/bin &&
 mkdir ${HOME}/nginx &&
 git -C ${HOME}/nginx init &&
-git -C ${HOME}/nginx add remote origin ssh://git@gitlab.363-283.io:2252/cte/nginx-dev-infrastructure.git &&
+git -C ${HOME}/nginx remote add origin ssh://git@gitlab.363-283.io:2252/cte/nginx-dev-infrastructure.git &&
 true
