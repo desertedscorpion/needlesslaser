@@ -5,6 +5,7 @@ chmod 0555 /opt/needlesslaser/bin/* &&
 dnf update --assumeyes &&
 dnf install --assumeyes git nodejs make python tar which bzip2 ncurses gmp-devel mpfr-devel libmpc-devel glibc-devel flex bison glibc-static zlib-devel gcc gcc-c++ sudo bash-completion pass gnupg gnupg2 nginx npm xz &&
 /opt/needlesslaser/sbin/install-node 6.2.0 &&
+npm -g install gulp jspm yo &&
 dnf update --assumeyes &&
 dnf clean all &&
     mkdir /opt/needlesslaser/c9sdk &&
