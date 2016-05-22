@@ -15,7 +15,6 @@ git config --global user.name "${GIT_NAME}" &&
 git -C ${HOME}/workspace remote add origin ${GIT_URL} &&
 git -C ${HOME}/workspace pull origin "${GIT_BRANCH_PARENT}" &&
 git -C ${HOME}/workspace checkout -b scratch-$(cat /dev/urandom | tr -dc 'A-Z0-9' | fold -w 4 | head -n 1)-$(echo "${GIT_BRANCH_CHILD}" | sed -e 's/ /_/g') &&
-node /opt/needlesslaser/c9sdk/server.js --listen 0.0.0.0 -w ${HOME}/workspace -p 8080 --auth ${USER}:${USER} &&
 (gpg --allow-secret-key- --import /opt/needlesslaser/private/secret.key || true ) &&
 (gpg2 --allow-secret-key- --import /opt/needlesslaser/private/secret.key || true ) &&
 gpg --import-ownertrust /opt/needlesslaser/private/owner.trust &&
@@ -26,5 +25,6 @@ pass git pull origin master &&
 ln --symbolic --force /opt/needlesslaser/bin/post-commit ${HOME}/.password-store/.git/hooks &&
 git -C ${HOME}/nginx pull origin master &&
 npm set cafile /opt/needlesslaser/private/ca.crt &&
-echo -e "${LDAP_USERNAME}\n${LDAP_PASSWORD}\n${LDAP_EMAIL}\n" | npm adduser --registry https://npm.363-283.io
+echo -e "${LDAP_USERNAME}\n${LDAP_PASSWORD}\n${LDAP_EMAIL}\n" | npm adduser --registry https://npm.363-283.io &&
+node /opt/needlesslaser/c9sdk/server.js --listen 0.0.0.0 -w ${HOME}/workspace -p 8080 --auth ${USER}:${USER} &&
 true
