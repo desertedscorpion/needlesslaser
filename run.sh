@@ -8,6 +8,7 @@ GIT_BRANCH_CHILD="${5}" &&
 LDAP_USERNAME="${6}" &&
 LDAD_PASSWORD="${7}" &&
 LDAP_EMAIL="${8}" &&
+GPG_KEY_ID="${9}" &&
 cp /opt/needlesslaser/private/id_rsa ${HOME}/.ssh/id_rsa &&
 chmod 0600 ${HOME}/.ssh/id_rsa &&
 git config --global user.email "${GIT_EMAIL}" &&
