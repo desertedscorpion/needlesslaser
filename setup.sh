@@ -7,5 +7,8 @@ ln --symbolic --force /opt/needlesslaser/bin/post-commit ${HOME}/workspace/.git/
 mkdir ${HOME}/.ssh &&
 chmod 0700 ${HOME}/.ssh &&
 cp /opt/needlesslaser/lib/config ${HOME}/.ssh/config &&
-chmod 0600 /${HOME}/.ssh/config &&
+chmod 0600 ${HOME}/.ssh/config &&
+mkdir ${HOME}/bin &&
+chmod 0600 ${HOME}/bin &&
+ln --symbolic --force /opt/needlesslaser/bin/rebase ${HOME}/bin/rebase &&
 true
