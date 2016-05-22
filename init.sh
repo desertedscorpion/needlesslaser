@@ -2,6 +2,7 @@
 
 if [ "user" != "${LUSER}" ]
 then
+    groupmod --new-name ${LUSER} user &&
     usermod -d /home/${LUSER} -m -g ${LUSER} -l ${LUSER} user &&
     true
 fi &&
