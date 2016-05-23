@@ -1,6 +1,7 @@
 #!/bin/bash
 
-source /opt/needlesslaser/environment &&
+source /opt/needlesslaser/private/ldap.properties &&
+source /opt/needlesslaser/private/git.properties &&
 cp /opt/needlesslaser/private/id_rsa ${HOME}/.ssh/id_rsa &&
 chmod 0600 ${HOME}/.ssh/id_rsa &&
 git config --global user.email "${GIT_EMAIL}" &&
