@@ -1,4 +1,4 @@
 #!/bin/bash
 
-su --login ${LUSER} /opt/needlesslaser/bin/init.sh  &&
+su --login user /opt/needlesslaser/bin/init.sh  &&
 true
