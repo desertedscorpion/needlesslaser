@@ -6,4 +6,7 @@ COPY config /opt/needlesslaser/lib/config
 RUN /usr/bin/bash /opt/needlesslaser/sbin/install.sh
 VOLUME /opt/needlesslaser/private
 EXPOSE 8080
+EXPOSE 8443
+EXPOSE 9000
+EXPOSE 9443
 CMD ["/opt/needlesslaser/sbin/init.sh"]
