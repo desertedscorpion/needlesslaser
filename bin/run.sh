@@ -15,7 +15,7 @@ pass init ${GPG_KEY_ID} &&
 pass git init &&
 pass git remote add origin ${PASS_GIT_URL} &&
 pass git pull origin master &&
-ln --symbolic --force /opt/needlesslaser/bin/post-commit ${HOME}/.password-store/.git/hooks &&
+ln --symbolic --force /opt/needlesslaser/bin/post-commit.sh ${HOME}/.password-store/.git/hooks &&
 
 git -C ${HOME}/nginx pull origin develop &&
 npm set cafile /opt/needlesslaser/private/ca.crt  &&
