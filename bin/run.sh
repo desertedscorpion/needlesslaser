@@ -1,15 +1,6 @@
 #!/bin/bash
 
-GIT_EMAIL="${1}" &&
-GIT_NAME="${2}" &&
-GIT_URL="${3}" &&
-GIT_BRANCH_PARENT="${4}" &&
-GIT_BRANCH_CHILD="${5}" &&
-LDAP_USERNAME="${6}" &&
-LDAD_PASSWORD="${7}" &&
-LDAP_EMAIL="${8}" &&
-GPG_KEY_ID="${9}" &&
-PASS_GIT_URL="${10}" &&
+source /opt/needlesslaser/environment &&
 cp /opt/needlesslaser/private/id_rsa ${HOME}/.ssh/id_rsa &&
 chmod 0600 ${HOME}/.ssh/id_rsa &&
 git config --global user.email "${GIT_EMAIL}" &&
