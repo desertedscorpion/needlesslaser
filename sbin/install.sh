@@ -3,7 +3,7 @@
 chmod 0500 /opt/needlesslaser/sbin/* &&
 chmod 0555 /opt/needlesslaser/bin/* &&
 dnf update --assumeyes &&
-dnf install --assumeyes git make python tar which bzip2 ncurses gmp-devel mpfr-devel libmpc-devel glibc-devel flex bison glibc-static zlib-devel gcc gcc-c++ sudo pass &&
+dnf install --assumeyes git make python tar which bzip2 ncurses gmp-devel mpfr-devel libmpc-devel glibc-devel flex bison glibc-static zlib-devel gcc gcc-c++ sudo pass gnupg gnupg2 &&
 dnf update --assumeyes &&
 dnf clean all &&
     mkdir /opt/needlesslaser/c9sdk &&
