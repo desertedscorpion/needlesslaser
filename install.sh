@@ -6,5 +6,6 @@ dnf update --assumeyes &&
 /opt/needlesslaser/sbin/install-c9sdk.sh &&
 dnf update --assumeyes &&
 dnf clean all &&
+    adduser --create-home user &&
     su --login user /opt/needlesslaser/bin/setup.sh &&
     true
