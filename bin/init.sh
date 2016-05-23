@@ -2,6 +2,7 @@
 
 source /opt/needlesslaser/private/ldap.properties &&
 source /opt/needlesslaser/private/git.properties &&
+source /opt/needlesslaser/private/pass.properties &&
 cp /opt/needlesslaser/private/id_rsa ${HOME}/.ssh/id_rsa &&
 chmod 0600 ${HOME}/.ssh/id_rsa &&
 git config --global user.email "${GIT_EMAIL}" &&
@@ -12,7 +13,7 @@ git -C ${HOME}/workspace checkout -b scratch-$(cat /dev/urandom | tr -dc 'A-Z0-9
 (gpg --allow-secret-key --import /opt/needlesslaser/private/secret.key || true ) &&
 (gpg2 --allow-secret-key --import /opt/needlesslaser/private/secret.key || true ) &&
 gpg --import-ownertrust /opt/needlesslaser/private/owner.trust &&
-pass init ${GPG_KEY_ID} &&
+pass init ${PASS_GPG_KEY_ID} &&
 pass git init &&
 pass git remote add origin ${PASS_GIT_URL} &&
 pass git pull origin master &&
