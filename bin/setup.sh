@@ -10,7 +10,4 @@ cp /opt/needlesslaser/lib/config ${HOME}/.ssh/config &&
 chmod 0600 ${HOME}/.ssh/config &&
 mkdir ${HOME}/bin &&
 chmod 0700 ${HOME}/bin &&
-npm set registry https://npm.363-283.io &&
-npm set cafile /opt/needlesslaser/private/ca.crt &&
-npm config set strict-ssl false &&
 true
