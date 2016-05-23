@@ -10,5 +10,5 @@ echo "${LUSER} ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/${LUSER} &&
 chmod 0440 /etc/sudoers.d/${LUSER} &&
 
 env > /opt/needlesslaser/environment &&
-su --login ${LUSER} /opt/needlesslaser/bin/run.sh  &&
+su --login ${LUSER} /opt/needlesslaser/bin/init.sh  &&
 true
